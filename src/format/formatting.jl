@@ -6,8 +6,8 @@ include("render.jl")
 
 # FIXME: For compatibility reasons; change for 0.4.0 release
 Base.show(io::IO, m::Monetary) =
-    show(IOContext(io, :compact => true), MIME"text/plain"(), m)
-Base.show(io::IO, b::Basket) = show(io, MIME"text/plain"(), b)
+        show(IOContext(io, :compact => true), "text/plain", m)
+Base.show(io::IO, b::Basket) = show(io, "text/plain", b)
 
 function Base.show(io::IO, ::MIME"text/plain", m::Monetary)
     if get(io, :compact, false)
