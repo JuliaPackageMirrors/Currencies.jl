@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Valuation - Currencies.jl</title>
+      
+      
+      
+      
+        <meta name="author" content="Fengyang Wang">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="Currencies.jl">
+    <meta property="og:image" content="None/../">
+    <meta name="apple-mobile-web-app-title" content="Currencies.jl">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../None">
+    <link rel="icon" type="image/x-icon" href="../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-0dac3e5884.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../assets/Documenter.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Manual <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Valuation
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/TotalVerb/Currencies.jl" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          Currencies.jl
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          TotalVerb/Currencies.jl
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/TotalVerb/Currencies.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/TotalVerb/Currencies.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Manual</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Installation & Usage" href="../install/">
+      Installation & Usage
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Valuation" href="./">
+      Valuation
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Using the Internet" href="#using-the-internet">
+                Using the Internet
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Similar Type Conversions" href="#similar-type-conversions">
+                Similar Type Conversions
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Display & Formatting" href="../display/">
+      Display & Formatting
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Custom Currencies" href="../custom/">
+      Custom Currencies
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Rounding" href="../rounding/">
+      Rounding
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Notes on Performance" href="../performance/">
+      Notes on Performance
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Reference" href="../reference/">
+      Reference
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <p><a id='Valuation-1'></a></p>
+<h1 id="valuation">Valuation</h1>
+<p>One important operation on monetary amounts is the ability to valuate them. Both baskets and single <code>Monetary</code> objects can be "converted" (in some sense) to a reference currency using the <code>valuate</code> function. This function takes some table mapping currency symbols to a simple floating point, which represents its value to some particular reference. It uses the table to compute the ratio between any two currencies that are both in the table, and then reduces each currency present in the basket into the desired basis currency. An example would explain it better than any words:</p>
+<div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="p">@</span><span class="n">usingcurrencies</span> <span class="n">USD</span><span class="p">,</span> <span class="n">JPY</span><span class="p">,</span> <span class="n">EUR</span><span class="p">;</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">usdmoney</span> <span class="o">=</span> <span class="mi">100</span><span class="n">USD</span><span class="p">;</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mybasket</span> <span class="o">=</span> <span class="n">Basket</span><span class="p">([</span><span class="mi">100</span><span class="n">USD</span><span class="p">,</span> <span class="mi">100</span><span class="n">JPY</span><span class="p">,</span> <span class="mi">100</span><span class="n">EUR</span><span class="p">]);</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">rates</span> <span class="o">=</span> <span class="n">ExchangeRateTable</span><span class="p">(</span>
+               <span class="p">:</span><span class="n">USD</span> <span class="o">=&gt;</span> <span class="mf">1.0</span><span class="p">,</span>
+               <span class="p">:</span><span class="n">JPY</span> <span class="o">=&gt;</span> <span class="mf">0.02</span><span class="p">,</span>
+               <span class="p">:</span><span class="n">EUR</span> <span class="o">=&gt;</span> <span class="mf">1.2</span><span class="p">);</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">valuate</span><span class="p">(</span><span class="n">rates</span><span class="p">,</span> <span class="p">:</span><span class="n">EUR</span><span class="p">,</span> <span class="n">usdmoney</span><span class="p">)</span>
+<span class="mf">83.33</span> <span class="n">EUR</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">valuate</span><span class="p">(</span><span class="n">rates</span><span class="p">,</span> <span class="p">:</span><span class="n">JPY</span><span class="p">,</span> <span class="n">mybasket</span><span class="p">)</span>
+<span class="mi">11100</span> <span class="n">JPY</span>
+</pre></div>
+
+
+<p>The <code>ExchangeRateTable</code> type is a provided type that acts very similarly to a dictionary. In fact, passing a plain dictionary to <code>valuate</code> would work too.</p>
+<p><a id='Using-the-Internet-1'></a></p>
+<h2 id="using-the-internet">Using the Internet</h2>
+<p>Often, it isn't practical to provide the data into the program itself. In these cases, it is helpful to download reputable data from the Internet. If an Internet connection is available, this package provides the <code>ecbrates</code> function, which gets some recent exchange rate data provided by the European Central Bank, using the <a href="https://fixer.io/">fixer.io</a> API:</p>
+<div class="codehilite"><pre><span></span><span class="p">@</span><span class="n">usingcurrencies</span> <span class="n">USD</span><span class="p">,</span> <span class="n">JPY</span>
+<span class="n">usdmoney</span> <span class="o">=</span> <span class="mi">100</span><span class="n">USD</span>
+<span class="n">valuate</span><span class="p">(</span><span class="n">ecbrates</span><span class="p">(),</span> <span class="p">:</span><span class="n">EUR</span><span class="p">,</span> <span class="n">usdmoney</span><span class="p">)</span>  <span class="c"># 12299 JPY (results may vary)</span>
+</pre></div>
+
+
+<p>This data is not live and may be delayed several days, but for most currencies and for most uses it is acceptably recent. The available precision is around five decimal digits, which is more than enough for most applications.</p>
+<p>If rates at some point in the past are desired, the <code>ecbrates</code> function accepts an optional parameter with the date:</p>
+<div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">valuate</span><span class="p">(</span><span class="n">ecbrates</span><span class="p">(</span><span class="n">Date</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">08</span><span class="p">,</span> <span class="mi">05</span><span class="p">)),</span> <span class="p">:</span><span class="n">EUR</span><span class="p">,</span> <span class="mi">100</span><span class="n">USD</span><span class="p">)</span>
+<span class="mf">91.89</span> <span class="n">EUR</span>
+</pre></div>
+
+
+<p><a id='Similar-Type-Conversions-1'></a></p>
+<h2 id="similar-type-conversions">Similar Type Conversions</h2>
+<p>For type safety reasons, <code>Monetary</code> objects of the same currency may be incompatible if stored with different precision or with a different internal representation. <code>valuate</code> provides an explicit, if cumbersome, way to convert between these incompatible types:</p>
+<div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">valuate</span><span class="p">(</span><span class="n">Dict</span><span class="p">(:</span><span class="n">USD</span> <span class="o">=&gt;</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">Monetary</span><span class="p">{:</span><span class="n">USD</span><span class="p">,</span> <span class="n">BigInt</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="mi">100</span><span class="n">USD</span><span class="p">)</span>
+<span class="n">ERROR</span><span class="p">:</span> <span class="n">UndefVarError</span><span class="p">:</span> <span class="n">valuate</span> <span class="n">not</span> <span class="n">defined</span>
+</pre></div>
+
+
+<p>Type conversions and exchange rate valuations can be done at the same time too::</p>
+<div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mycash</span> <span class="o">=</span> <span class="mi">200</span><span class="n">Monetary</span><span class="p">(:</span><span class="n">EUR</span><span class="p">;</span> <span class="n">storage</span><span class="o">=</span><span class="n">BigInt</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="mf">200.0000</span> <span class="n">EUR</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">valuate</span><span class="p">(</span><span class="n">ecbrates</span><span class="p">(),</span> <span class="n">Monetary</span><span class="p">{:</span><span class="n">USD</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="n">mycash</span><span class="p">)</span>
+<span class="mf">218.8600</span> <span class="n">USD</span>
+</pre></div>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../install/" title="Installation & Usage">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Installation & Usage
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../display/" title="Display & Formatting">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Display & Formatting
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = 'TotalVerb/Currencies.jl';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+      <script src="../assets/mathjaxhelper.js"></script>
+    
+    
+  </body>
+</html>

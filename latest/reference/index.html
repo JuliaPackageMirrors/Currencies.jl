@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Reference - Currencies.jl</title>
+      
+      
+      
+      
+        <meta name="author" content="Fengyang Wang">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="Currencies.jl">
+    <meta property="og:image" content="None/../">
+    <meta name="apple-mobile-web-app-title" content="Currencies.jl">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../None">
+    <link rel="icon" type="image/x-icon" href="../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-0dac3e5884.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../assets/Documenter.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        Reference
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/TotalVerb/Currencies.jl" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          Currencies.jl
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          TotalVerb/Currencies.jl
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/TotalVerb/Currencies.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/TotalVerb/Currencies.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Home" href="..">
+      Home
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Manual</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Installation & Usage" href="../install/">
+      Installation & Usage
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Valuation" href="../valuation/">
+      Valuation
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Display & Formatting" href="../display/">
+      Display & Formatting
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Custom Currencies" href="../custom/">
+      Custom Currencies
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Rounding" href="../rounding/">
+      Rounding
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Notes on Performance" href="../performance/">
+      Notes on Performance
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="Reference" href="./">
+      Reference
+    </a>
+    
+      
+        
+      
+      
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <p><a id='Reference-1'></a></p>
+<h1 id="reference">Reference</h1>
+<p><a id='Currencies.AbstractMonetary' href='#Currencies.AbstractMonetary'>#</a>
+<strong><code>Currencies.AbstractMonetary</code></strong> &mdash; <em>Type</em>.</p>
+<p>The abstract type of objects representing a single value in one currency, or a collection of values in a set of currencies. These objects should behave like <code>Monetary</code> or <code>Basket</code> objects.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/monetary.jl#L4-8' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.Basket' href='#Currencies.Basket'>#</a>
+<strong><code>Currencies.Basket</code></strong> &mdash; <em>Type</em>.</p>
+<p>A mutable collection of <code>Monetary</code> values of various currencies. Like regular <code>Monetary</code> values, <code>Basket</code> values support basic arithmetic operations, with both other baskets and with raw monetary values. The constructor for <code>Basket</code> accepts either a monetary value or a vector of monetary values.</p>
+<div class="codehilite"><pre><span></span>basket = Basket([1USD, 5EUR])        # $1 + 5€
+basket += 2EUR                       # $1 + 7€
+basket *= 2                          # $2 + 14€
+</pre></div>
+
+
+<p><code>Basket</code> values also support iteration. The iteration order of currencies is undefined. For instance, the following will print <code>1.00 USD</code> and <code>5.00 EUR</code>, in some order. Iteration will skip over any currencies with zero weight in the basket.</p>
+<div class="codehilite"><pre><span></span>for amt in Basket([1USD, 5EUR])
+    println(amt)
+end
+</pre></div>
+
+
+<p>One can also mutate the basket with index notation, or with <code>push!</code>.</p>
+<div class="codehilite"><pre><span></span>basket = Basket([1USD, 2EUR])
+basket[:USD] = 3USD  # Basket([3USD, 2EUR])
+push!(basket, 10GBP) # Basket([3USD, 2EUR, 10GBP])
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/basket.jl#L27-51' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.ExchangeRateTable' href='#Currencies.ExchangeRateTable'>#</a>
+<strong><code>Currencies.ExchangeRateTable</code></strong> &mdash; <em>Type</em>.</p>
+<p>A table of exchange rates denominated in some currency. In which currency it is denominated is unimportant, so long as all exchange rates are denominated in the same currency. The denomination currency need not even exist in the table.</p>
+<p>Optionally, <code>ExchangeRateTable</code> objects may contain information about the date for which they apply. If this isn't provided, then the current date is used.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/valuate.jl#L3-10' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.FormatSpecification' href='#Currencies.FormatSpecification'>#</a>
+<strong><code>Currencies.FormatSpecification</code></strong> &mdash; <em>Type</em>.</p>
+<p>A collection of <code>FormatRequirement</code>s.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/format/rules.jl#L107-109' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.Monetary' href='#Currencies.Monetary'>#</a>
+<strong><code>Currencies.Monetary</code></strong> &mdash; <em>Type</em>.</p>
+<p>A representation of a monetary value, denominated in some currency. The currency used is part of the type and not the object. The value is internally represented as a quantity of some integer type. The usual way to construct a <code>Monetary</code> directly, if needed, is:</p>
+<div class="codehilite"><pre><span></span>Monetary(:USD)      # 1.00 USD
+Monetary(:USD, 325) # 3.25 USD
+</pre></div>
+
+
+<p>Be careful about the decimal point, as the <code>Monetary</code> constructor takes an integer, representing the number of smallest denominations of the currency. Typically, this constructor is not called directly. It is easier to use the <code>@usingcurrencies</code> macro and the <code>100USD</code> form instead.</p>
+<p>Although this type is flexible enough to support values internally represented as any integer type, such as <code>BigInt</code>, it is recommended to use the built-in <code>Int</code> type on your architecture unless you need a bigger type. Do not mix different kinds of internal types. To use a different internal representation, change the type of the second argument to <code>Monetary</code>:</p>
+<div class="codehilite"><pre><span></span>Monetary(:USD, BigInt(100))
+</pre></div>
+
+
+<p>In some applications, the minor denomination of a currency is not precise enough. It is sometimes useful to override the number of decimal points stored. For these applications, a third type parameter can be provided, indicating the number of decimal points to keep after the major denomination:</p>
+<div class="codehilite"><pre><span></span>Monetary{:USD, BigInt, 4}(10000)            # 1.0000 USD
+Monetary(:USD, BigInt(10000); precision=4)  # 1.0000 USD
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/monetary.jl#L11-40' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.compile' href='#Currencies.compile'>#</a>
+<strong><code>Currencies.compile</code></strong> &mdash; <em>Function</em>.</p>
+<p>Compile the symbol requirement to a simplified form.</p>
+<p>In the simplified form, the <code>location</code> field is guaranteed to take the value of <code>:before</code> or <code>:after</code>.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/format/render.jl#L31-36' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.compoundfv' href='#Currencies.compoundfv'>#</a>
+<strong><code>Currencies.compoundfv</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>compoundfv(amount, interest, periods) → Monetary
+</pre></div>
+
+
+<p>Compute the future value of the given monetary amount, at the given discount rate, compounded each period. For example, to find the future value of 1000 (US) today in 12 years, at an interest rate of 3% per year, compute:</p>
+<div class="codehilite"><pre><span></span>compoundfv(1000USD, 0.03, 12)
+</pre></div>
+
+
+<p>This computation assumes exact compounding, and rounds only once at the end. If the compounding method in practice is rounded, then this result of this function will be incorrect.</p>
+<p>This method is generic; any type for the PV is accepted provided that it is compatible with real multiplication. Negative values for the rate and the period are allowed.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/investments.jl#L27-43' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.currency' href='#Currencies.currency'>#</a>
+<strong><code>Currencies.currency</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>currency(m::Monetary) → Symbol
+</pre></div>
+
+
+<p>Return a symbol corresponding to the ISO 4217 currency code of the currency that the given monetary amount is representing. For example, <code>currency(80USD)</code> will return <code>:USD</code>. If the given monetary value is of a non-ISO 4217 currency, then the returned symbol should contain only lowercase letters.</p>
+<p>Prefer <code>iso4217alpha</code> to this function if a string is desired.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L14-23' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.currencyinfo' href='#Currencies.currencyinfo'>#</a>
+<strong><code>Currencies.currencyinfo</code></strong> &mdash; <em>Function</em>.</p>
+<p>Get a brief human-readable English-language description of the currency. The description should begin with the common name of the currency, which should describe it unambiguously (up to variations on the same currency). Optionally, parentheses following the main description may include additional information (such as the unit of a major currency unit).</p>
+<p>This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L42-51' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.decimals' href='#Currencies.decimals'>#</a>
+<strong><code>Currencies.decimals</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>decimals(m::Monetary) → Int
+decimals(s::Symbol)   → Int
+decimals(d::DataType) → Int
+</pre></div>
+
+
+<p>Get the precision, in terms of the number of decimal places after the major currency unit, of the given <code>Monetary</code> value or type. Alternatively, if given a symbol, gets the default exponent (the number of decimal places to represent the minor currency unit) for that symbol. Return <code>-1</code> if there is no sane minor unit, such as for several kinds of precious metal.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L26-36' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.ecbrates' href='#Currencies.ecbrates'>#</a>
+<strong><code>Currencies.ecbrates</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>ecbrates()           → ExchangeRateTable
+ecbrates(date::Date) → ExchangeRateTable
+</pre></div>
+
+
+<p>Get an <code>ExchangeRateTable</code> from European Central Bank data for the specified date, or for the most recent date available. European Central Bank data is not available for all currencies, and it is often out of date. This function requires a connection to the Internet, and reraises whatever exception is thrown from the <code>Requests</code> package if the connection fails for any reason.</p>
+<p>Data is retrieved from https://fixer.io/, and then cached in memory to avoid excessive network traffic. Because of the nature of cached data, an application running for a long period of time may receive data that is one week or more out of date.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/valuate.jl#L48-62' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.filltype' href='#Currencies.filltype'>#</a>
+<strong><code>Currencies.filltype</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>filltype(typ) → typ
+</pre></div>
+
+
+<p>Fill in default type parameters to get a fully-specified concrete type from a partially-specified one.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/monetary.jl#L61-66' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.format' href='#Currencies.format'>#</a>
+<strong><code>Currencies.format</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span><span class="nt">format</span><span class="o">(</span><span class="nt">m</span><span class="o">:</span><span class="nd">:Monetary</span><span class="o">;</span> <span class="nt">styles</span><span class="o">=</span><span class="cp">[</span><span class="p">:</span><span class="nx">finance</span><span class="cp">]</span><span class="o">)</span>
+</pre></div>
+
+
+<p>Format the given monetary amount to meet the requirements of the given style. Available styles are: <code>:finance</code>, <code>:us</code>, <code>:european</code>, and <code>:brief</code>. For LaTeX output, provide <code>:latex</code>. For plain output (default), provide <code>:plain</code>.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/format/render.jl#L107-113' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.iso4217alpha' href='#Currencies.iso4217alpha'>#</a>
+<strong><code>Currencies.iso4217alpha</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>iso4217alpha(s::Symbol)   → String
+iso4217alpha(m::Monetary) → String
+iso4217alpha(t::DataType) → String
+</pre></div>
+
+
+<p>Get the ISO 4217 alphabetic code for a currency. For custom currencies, a lowercase string will be returned, and this should not be interpreted as an ISO 4217 code. Otherwise, a three-letter uppercase string will be returned. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L69-79' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.iso4217num' href='#Currencies.iso4217num'>#</a>
+<strong><code>Currencies.iso4217num</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>iso4217num(s::Symbol)   → Int
+iso4217num(m::Monetary) → Int
+iso4217num(t::DataType) → Int
+</pre></div>
+
+
+<p>Get the ISO 4217 numeric code for a currency. For custom currencies, a value of <code>0</code> will be returned. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object. Note that most applications should zero-pad this code to three digits.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L55-64' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.longsymbol' href='#Currencies.longsymbol'>#</a>
+<strong><code>Currencies.longsymbol</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>longsymbol(s::Symbol)   → String
+longsymbol(m::Monetary) → String
+longsymbol(t::DataType) → String
+</pre></div>
+
+
+<p>Get a commonly-used currency symbol for a currency, with at least enough disambiguation to be non-ambiguous. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L97-105' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.newcurrency!' href='#Currencies.newcurrency!'>#</a>
+<strong><code>Currencies.newcurrency!</code></strong> &mdash; <em>Function</em>.</p>
+<p>Add a new currency to the (global) currency list and return a unit for that currency. Prefer the <code>@usingcustomcurrency</code> macro, which leads to more clear code, whenever possible. This function takes three arguments: the symbol for the currency, a string description of the currency (following the conventions outlined in the documentation for <code>currencyinfo</code>), and an exponent representing the number of decimal points to describe the minor currency unit in terms of the major currency unit. Conventionally, the symbol used to describe custom currencies should consist of only lowercase letters.</p>
+<div class="codehilite"><pre><span></span>btc = newcurrency!(:btc, &quot;Bitcoin&quot;, 8)  # 1.00000000 BTC
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/custom.jl#L3-14' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.shortsymbol' href='#Currencies.shortsymbol'>#</a>
+<strong><code>Currencies.shortsymbol</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>shortsymbol(s::Symbol)   → String
+shortsymbol(m::Monetary) → String
+shortsymbol(t::DataType) → String
+</pre></div>
+
+
+<p>Get a short, possibly ambiguous, commonly-used symbol for a currency. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L84-92' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.simplefv' href='#Currencies.simplefv'>#</a>
+<strong><code>Currencies.simplefv</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>simplefv(amount, interest, periods) → Monetary
+</pre></div>
+
+
+<p>Compute the future value of the given monetary amount, at the given discount rate, compounded each period on the principal only. This is known as "simple interest"; note that this is very rare in practice. For example, to find the future value of 1000 (US) today in 12 years, at a simple interest rate of 5% per year, compute:</p>
+<div class="codehilite"><pre><span></span>simplefv(1000USD, 0.05, 12)
+</pre></div>
+
+
+<p>This computation rounds only once at the end. If the amounts in practice are rounded, then this result of this function will be incorrect.</p>
+<p>This method is generic; any type for the PV is accepted provided that it is compatible with real multiplication. Negative values for the rate and the period are allowed.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/investments.jl#L4-21' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.unit' href='#Currencies.unit'>#</a>
+<strong><code>Currencies.unit</code></strong> &mdash; <em>Function</em>.</p>
+<p>longsymbol(s::Symbol)   → Monetary{s} longsymbol(m::Monetary) → typeof(m) longsymbol(t::DataType) → t</p>
+<p>Get the major unit of the currency. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/currency.jl#L109-116' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.valuate' href='#Currencies.valuate'>#</a>
+<strong><code>Currencies.valuate</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>valuate(table, as::Symbol, amount::Monetary)   → Monetary{as}
+valuate(table, as::DataType, amount::Monetary) → as
+</pre></div>
+
+
+<p>Reduce the given <code>Monetary</code> or <code>Basket</code> to a value in a single specified currency or of a single specified type, using the given exchange rate table. The exchange rate table can either be an <code>ExchangeRateTable</code> or any other <code>Associative</code> mapping <code>Symbol</code> to <code>Real</code>.</p>
+<div class="codehilite"><pre><span></span>rates = ExchangeRateTable(:USD =&gt; 1.0, :CAD =&gt; 0.75)
+valuate(rates, :CAD, 21USD)  # 28CAD
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/valuate.jl#L77-88' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.@usingcurrencies' href='#Currencies.@usingcurrencies'>#</a>
+<strong><code>Currencies.@usingcurrencies</code></strong> &mdash; <em>Macro</em>.</p>
+<p>Export each given currency symbol into the current namespace. The individual unit exported will be a full unit of the currency specified, not the smallest possible unit. For instance, <code>@usingcurrencies EUR</code> will export <code>EUR</code>, a currency unit worth 1€, not a currency unit worth 0.01€.</p>
+<div class="codehilite"><pre><span></span>@usingcurrencies EUR, GBP, AUD
+7AUD  # 7.00 AUD
+</pre></div>
+
+
+<p>There is no sane unit for certain currencies like <code>XAU</code> or <code>XAG</code>, so this macro does not work for those. Instead, define them manually:</p>
+<div class="codehilite"><pre><span></span>const XAU = Monetary(:XAU; precision=4)
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/usingcurrencies.jl#L1-14' class='documenter-source'>source</a><br></p>
+<p><a id='Currencies.@usingcustomcurrency' href='#Currencies.@usingcustomcurrency'>#</a>
+<strong><code>Currencies.@usingcustomcurrency</code></strong> &mdash; <em>Macro</em>.</p>
+<p>Add a new currency to the (global) currency list and assign a variable in the local namespace to that currency's unit. Provide three arguments: an identifier for the currency, a string description of the currency (following the conventions outlined in the documentation for <code>currencyinfo</code>), and an exponent representing the number of decimal points to describe the minor currency unit in terms of the major currency unit. Conventionally, the identifer used to describe custom currencies should consist of only lowercase letters.</p>
+<div class="codehilite"><pre><span></span>@usingcustomcurrency btc &quot;Bitcoin&quot; 8
+10btc  # 10.00000000 btc
+</pre></div>
+
+
+<p><a target='_blank' href='https://github.com/TotalVerb/Currencies.jl/tree/15ed54065d5405d73ff7002fff3c2089d6fb5876//src/custom.jl#L21-32' class='documenter-source'>source</a><br></p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../performance/" title="Notes on Performance">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Notes on Performance
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = 'TotalVerb/Currencies.jl';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+      <script src="../assets/mathjaxhelper.js"></script>
+    
+    
+  </body>
+</html>
