@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Currencies.jl - Simple checked currencies for Julia</title>
+      
+      
+        <meta name="description" content="Simple checked currencies for Julia">
+      
+      
+      
+        <meta name="author" content="Fengyang Wang">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="Currencies.jl">
+    <meta property="og:image" content="None/./">
+    <meta name="apple-mobile-web-app-title" content="Currencies.jl">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./None">
+    <link rel="icon" type="image/x-icon" href="./None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('./assets/fonts/icon.eot?52m981');
+      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('./assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('./assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('./assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/application-0dac3e5884.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="./assets/Documenter.css">
+    
+    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class=" ">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        Currencies.jl
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/TotalVerb/Currencies.jl" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          Currencies.jl
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          TotalVerb/Currencies.jl
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/TotalVerb/Currencies.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/TotalVerb/Currencies.jl/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="current" title="Home" href=".">
+      Home
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Contents" href="#contents">
+                Contents
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Index" href="#index">
+                Index
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Manual</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Installation & Usage" href="install/">
+      Installation & Usage
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Valuation" href="valuation/">
+      Valuation
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Display & Formatting" href="display/">
+      Display & Formatting
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Custom Currencies" href="custom/">
+      Custom Currencies
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Rounding" href="rounding/">
+      Rounding
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Notes on Performance" href="performance/">
+      Notes on Performance
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Reference" href="reference/">
+      Reference
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <p><a id='Currencies.jl-1'></a></p>
+<h1 id="currenciesjl">Currencies.jl</h1>
+<p>This package provides a simple interface to using a wide variety of currencies with checked arithmetic in Julia. While floating point arithmetic is very convenient for currency computations, there are common problems with using floating point comparisons. This package addresses those issues by treating monetary amounts as fixed-point decimals.</p>
+<p><a id='Contents-1'></a></p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="install/#Installation-and-Usage-1">Installation &amp; Usage</a><ul>
+<li><a href="install/#Creating-Monetary-Values-1">Creating <code>Monetary</code> Values</a></li>
+<li><a href="install/#Caution-with-one-1">Caution with <code>one</code></a></li>
+</ul>
+</li>
+<li><a href="valuation/#Valuation-1">Valuation</a><ul>
+<li><a href="valuation/#Using-the-Internet-1">Using the Internet</a></li>
+<li><a href="valuation/#Similar-Type-Conversions-1">Similar Type Conversions</a></li>
+</ul>
+</li>
+<li><a href="display/#Display-and-Formatting-1">Display &amp; Formatting</a><ul>
+<li><a href="display/#Quick-Display-1">Quick Display</a></li>
+<li><a href="display/#Formatting-1">Formatting</a></li>
+</ul>
+</li>
+<li><a href="custom/#Custom-Currencies-1">Custom Currencies</a></li>
+<li><a href="rounding/#Rounding-1">Rounding</a><ul>
+<li><a href="rounding/#Custom-Precision-1">Custom Precision</a></li>
+<li><a href="rounding/#Special-Metals-1">Special Metals</a></li>
+</ul>
+</li>
+<li><a href="performance/#Notes-on-Performance-1">Notes on Performance</a></li>
+<li><a href="reference/#Reference-1">Reference</a></li>
+</ul>
+<p><a id='Index-1'></a></p>
+<h2 id="index">Index</h2>
+<ul>
+<li><a href="reference/#Currencies.AbstractMonetary"><code>Currencies.AbstractMonetary</code></a></li>
+<li><a href="reference/#Currencies.Basket"><code>Currencies.Basket</code></a></li>
+<li><a href="reference/#Currencies.ExchangeRateTable"><code>Currencies.ExchangeRateTable</code></a></li>
+<li><a href="reference/#Currencies.FormatSpecification"><code>Currencies.FormatSpecification</code></a></li>
+<li><a href="reference/#Currencies.Monetary"><code>Currencies.Monetary</code></a></li>
+<li><a href="reference/#Currencies.compile"><code>Currencies.compile</code></a></li>
+<li><a href="reference/#Currencies.compoundfv"><code>Currencies.compoundfv</code></a></li>
+<li><a href="reference/#Currencies.currency"><code>Currencies.currency</code></a></li>
+<li><a href="reference/#Currencies.currencyinfo"><code>Currencies.currencyinfo</code></a></li>
+<li><a href="reference/#Currencies.decimals"><code>Currencies.decimals</code></a></li>
+<li><a href="reference/#Currencies.ecbrates"><code>Currencies.ecbrates</code></a></li>
+<li><a href="reference/#Currencies.filltype"><code>Currencies.filltype</code></a></li>
+<li><a href="reference/#Currencies.format"><code>Currencies.format</code></a></li>
+<li><a href="reference/#Currencies.iso4217alpha"><code>Currencies.iso4217alpha</code></a></li>
+<li><a href="reference/#Currencies.iso4217num"><code>Currencies.iso4217num</code></a></li>
+<li><a href="reference/#Currencies.longsymbol"><code>Currencies.longsymbol</code></a></li>
+<li><a href="reference/#Currencies.newcurrency!"><code>Currencies.newcurrency!</code></a></li>
+<li><a href="reference/#Currencies.shortsymbol"><code>Currencies.shortsymbol</code></a></li>
+<li><a href="reference/#Currencies.simplefv"><code>Currencies.simplefv</code></a></li>
+<li><a href="reference/#Currencies.unit"><code>Currencies.unit</code></a></li>
+<li><a href="reference/#Currencies.valuate"><code>Currencies.valuate</code></a></li>
+<li><a href="reference/#Currencies.@usingcurrencies"><code>Currencies.@usingcurrencies</code></a></li>
+<li><a href="reference/#Currencies.@usingcustomcurrency"><code>Currencies.@usingcustomcurrency</code></a></li>
+</ul>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+    </div>
+    <div class="next">
+      
+        <a href="install/" title="Installation & Usage">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Installation & Usage
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '.';
+      var repo_id  = 'TotalVerb/Currencies.jl';
+    </script>
+    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+      <script src="./assets/mathjaxhelper.js"></script>
+    
+    
+  </body>
+</html>
