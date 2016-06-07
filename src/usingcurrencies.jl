@@ -13,13 +13,14 @@ does not work for those. Instead, define them manually:
     const XAU = Monetary(:XAU; precision=4)
 """
 macro usingcurrencies(curs)
-    if isexpr(curs, Symbol)
+    if isa(curs, Symbol)
         curs = Expr(:tuple, curs)
     end
-    @assert isexpr(curs, :tuple)
+    @assert Meta.isexpr(curs, :tuple)
 
     quote
         $([:(const $cur = Monetary($(Expr(:quote, cur))))
             for cur in curs.args]...)
+        nothing
     end |> esc
 end

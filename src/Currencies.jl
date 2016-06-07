@@ -1,9 +1,9 @@
+__precompile__()
+
 module Currencies
 
-using MacroTools
 using Requests
 using Compat
-import Compat.String
 
 import Base: +, -, *, /, ==
 
@@ -16,6 +16,9 @@ export Basket, StaticBasket, DynamicBasket
 export simplefv, compoundfv
 export newcurrency!, @usingcustomcurrency
 export format
+
+# Extra compatibility code
+include("compat.jl")
 
 # Currency data
 include("data/currencies.jl")
