@@ -1,7 +1,6 @@
 # Currencies.jl
 
 [![Join the chat at https://gitter.im/JuliaFinance/Currencies.jl](https://badges.gitter.im/JuliaFinance/Currencies.jl.svg)](https://gitter.im/JuliaFinance/Currencies.jl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Build Status](https://travis-ci.org/JuliaFinance/Currencies.jl.svg?branch=master)](https://travis-ci.org/JuliaFinance/Currencies.jl)
 [![Build status](https://ci.appveyor.com/api/projects/status/bghtp8yj8sma24kd?svg=true)](https://ci.appveyor.com/project/JuliaFinance/currencies-jl)
 [![Coverage Status](https://coveralls.io/repos/JuliaFinance/Currencies.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/JuliaFinance/Currencies.jl?branch=master)
