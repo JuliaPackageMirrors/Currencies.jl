@@ -284,13 +284,13 @@
 <h2 id="quick-display">Quick Display</h2>
 <p>The representation used by <code>show</code> and <code>print</code> is the same, and is fairly compact. (Note that this behaviour is retained for compatibility and will likely change in the future.)</p>
 <div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">show</span><span class="p">(</span><span class="mi">100</span><span class="n">USD</span><span class="p">)</span>
-<span class="mf">100.0</span>
+
+<span class="mf">100.0</span><span class="n">USD</span>
 </pre></div>
 
 
 <p>When a richer representation than <code>text/plain</code> is available, such as in an IJulia environment, <code>Basket</code> and <code>Monetary</code> objects can render as LaTeX and Markdown, respectively:</p>
 <div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">show</span><span class="p">(</span><span class="n">STDOUT</span><span class="p">,</span> <span class="s">&quot;text/latex&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="n">USD</span><span class="p">)</span>
-<span class="n">USD</span><span class="o">$</span><span class="mf">100.00</span>\<span class="p">,</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">USD</span><span class="p">}</span><span class="o">$</span>
 
 <span class="n">julia</span><span class="o">&gt;</span> <span class="n">show</span><span class="p">(</span><span class="n">STDOUT</span><span class="p">,</span> <span class="s">&quot;text/markdown&quot;</span><span class="p">,</span> <span class="n">Basket</span><span class="p">([</span><span class="mi">100</span><span class="n">USD</span><span class="p">,</span> <span class="mi">100</span><span class="n">EUR</span><span class="p">]))</span>
 <span class="n">ERROR</span><span class="p">:</span> <span class="n">UndefVarError</span><span class="p">:</span> <span class="n">EUR</span> <span class="n">not</span> <span class="n">defined</span>
