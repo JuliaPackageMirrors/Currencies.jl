@@ -1,5 +1,7 @@
 # Display methods (show & print & writemime) tests
 
+using Currencies.CurrenciesCompat
+
 @testset "Output" begin
 
 @testset "text/plain" begin
