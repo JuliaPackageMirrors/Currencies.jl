@@ -1,7 +1,6 @@
 module CurrenciesBase
 
 using Compat
-using Requests
 
 using ..CurrencyData
 
@@ -11,7 +10,6 @@ import Base: +, -, *, /, ==
 export AbstractMonetary, Monetary
 export currency, decimals, @usingcurrencies
 export currencyinfo, iso4217num, iso4217alpha, shortsymbol, longsymbol
-export valuate, ExchangeRateTable, ecbrates
 export Basket, StaticBasket, DynamicBasket
 export simplefv, compoundfv
 export newcurrency!, @usingcustomcurrency
@@ -25,8 +23,7 @@ include("arithmetic.jl")
 include("basket.jl")
 include("mixed.jl")
 
-# Computations (valuation)
-include("valuate.jl")
+# Custom currencies and macros
 include("usingcurrencies.jl")
 include("custom.jl")
 

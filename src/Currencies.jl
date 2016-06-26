@@ -25,6 +25,9 @@ include("CurrencyData/CurrencyData.jl")
 include("CurrenciesBase/CurrenciesBase.jl")
 using .CurrenciesBase
 
+include("Valuation/Valuation.jl")
+using .Valuation
+
 # Interface (display/formatting, convenience macro)
 include("CurrencyFormatting/CurrencyFormatting.jl")
 using .CurrencyFormatting
