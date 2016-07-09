@@ -102,6 +102,16 @@
       </div>
     </div>
     
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/fengyang97" title="@fengyang97 on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/totalverb" title="@totalverb on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -134,7 +144,7 @@
         <strong>
           Currencies.jl
           <span class="version">
-            
+            0.5.0
           </span>
         </strong>
         
@@ -150,7 +160,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/JuliaFinance/Currencies.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/JuliaFinance/Currencies.jl/archive/0.5.0.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -270,6 +280,27 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+              
+              <li>
+                <a href="https://twitter.com/fengyang97" target="_blank" title="@fengyang97 on Twitter">
+                  @fengyang97 on Twitter
+                </a>
+              </li>
+            
+            
+              
+              <li>
+                <a href="https://github.com/totalverb" target="_blank" title="@totalverb on GitHub">
+                  @totalverb on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -339,7 +370,8 @@
 <span class="n">ERROR</span><span class="p">:</span> <span class="n">UndefVarError</span><span class="p">:</span> <span class="n">USD</span> <span class="n">not</span> <span class="n">defined</span>
 
 <span class="n">julia</span><span class="o">&gt;</span> <span class="n">dump</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
-<span class="o">$</span><span class="mf">100.00</span>\<span class="p">,</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">USD</span><span class="p">}</span><span class="o">$</span><span class="n">Currencies</span><span class="o">.</span><span class="n">CurrenciesBase</span><span class="o">.</span><span class="n">Monetary</span><span class="p">{:</span><span class="n">USD</span><span class="p">,</span><span class="n">Int128</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+ <span class="o">!!</span> <span class="err">&#39;</span><span class="p">@</span><span class="n">autodocs</span><span class="o">&#39;</span> <span class="n">missing</span> <span class="err">&#39;</span><span class="n">Modules</span> <span class="o">=</span> <span class="o">...&#39;.</span> <span class="p">[</span><span class="n">src</span><span class="o">/</span><span class="n">reference</span><span class="o">.</span><span class="n">md</span><span class="p">]</span>
+<span class="n">Currencies</span><span class="o">.</span><span class="n">CurrenciesBase</span><span class="o">.</span><span class="n">Monetary</span><span class="p">{:</span><span class="n">USD</span><span class="p">,</span><span class="n">Int128</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
   <span class="n">val</span><span class="p">:</span> <span class="n">Int128</span> <span class="mi">1267650600228229401496703205376000</span>
 </pre></div>
 
@@ -360,6 +392,8 @@
 
 <p>The usual caveats apply—be careful not to mix two different precisions of this currency. Otherwise, it can now be used like any other currency.</p>
           <aside class="copyright" role="note">
+            
+              Copyright © 2015–2016 Fengyang Wang and other contributors &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>

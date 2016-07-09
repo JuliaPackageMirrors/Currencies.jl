@@ -102,6 +102,16 @@
       </div>
     </div>
     
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/fengyang97" title="@fengyang97 on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/totalverb" title="@totalverb on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
     
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
@@ -134,7 +144,7 @@
         <strong>
           Currencies.jl
           <span class="version">
-            
+            0.5.0
           </span>
         </strong>
         
@@ -150,7 +160,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/JuliaFinance/Currencies.jl/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/JuliaFinance/Currencies.jl/archive/0.5.0.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -270,6 +280,27 @@
           
         </ul>
         
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+              
+              <li>
+                <a href="https://twitter.com/fengyang97" target="_blank" title="@fengyang97 on Twitter">
+                  @fengyang97 on Twitter
+                </a>
+              </li>
+            
+            
+              
+              <li>
+                <a href="https://github.com/totalverb" target="_blank" title="@totalverb on GitHub">
+                  @totalverb on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
       </div>
     </div>
   </div>
@@ -284,13 +315,13 @@
 <h2 id="quick-display">Quick Display</h2>
 <p>The representation used by <code>show</code> and <code>print</code> is the same, and is fairly compact. (Note that this behaviour is retained for compatibility and will likely change in the future.)</p>
 <div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">show</span><span class="p">(</span><span class="mi">100</span><span class="n">USD</span><span class="p">)</span>
-
-<span class="mf">100.0</span><span class="n">USD</span>
+<span class="mf">100.0</span>
 </pre></div>
 
 
 <p>When a richer representation than <code>text/plain</code> is available, such as in an IJulia environment, <code>Basket</code> and <code>Monetary</code> objects can render as LaTeX and Markdown, respectively:</p>
 <div class="codehilite"><pre><span></span><span class="n">julia</span><span class="o">&gt;</span> <span class="n">show</span><span class="p">(</span><span class="n">STDOUT</span><span class="p">,</span> <span class="s">&quot;text/latex&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="n">USD</span><span class="p">)</span>
+<span class="n">USD</span><span class="o">$</span><span class="mf">100.00</span>\<span class="p">,</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">USD</span><span class="p">}</span><span class="o">$</span>
 
 <span class="n">julia</span><span class="o">&gt;</span> <span class="n">show</span><span class="p">(</span><span class="n">STDOUT</span><span class="p">,</span> <span class="s">&quot;text/markdown&quot;</span><span class="p">,</span> <span class="n">Basket</span><span class="p">([</span><span class="mi">100</span><span class="n">USD</span><span class="p">,</span> <span class="mi">100</span><span class="n">EUR</span><span class="p">]))</span>
 <span class="n">ERROR</span><span class="p">:</span> <span class="n">UndefVarError</span><span class="p">:</span> <span class="n">EUR</span> <span class="n">not</span> <span class="n">defined</span>
@@ -321,6 +352,8 @@
 <p>The available local styles are <code>:us</code>, <code>:european</code>, <code>indian</code>, <code>:local</code>. The <code>local</code> style attempts to use the convention in the majority of areas where the particular currency is used. Local styles almost certainly conflict, and at most one of these can be used at once.</p>
 <p>A <code>:latex</code> style is provided to make formatting work nicely in LaTeX math mode, and a <code>:plain</code> style (which has no requirements) is also provided for consistency.</p>
           <aside class="copyright" role="note">
+            
+              Copyright © 2015–2016 Fengyang Wang and other contributors &ndash;
             
             Documentation built with
             <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
