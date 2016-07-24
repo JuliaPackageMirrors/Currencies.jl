@@ -312,7 +312,7 @@
 <p><a id='Currencies.CurrenciesBase.AbstractMonetary' href='#Currencies.CurrenciesBase.AbstractMonetary'>#</a>
 <strong><code>Currencies.CurrenciesBase.AbstractMonetary</code></strong> &mdash; <em>Type</em>.</p>
 <p>The abstract type of objects representing a single value in one currency, or a collection of values in a set of currencies. These objects should behave like <code>Monetary</code> or <code>Basket</code> objects.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/monetary.jl#L4-8' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/monetary.jl#L4-8' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.Basket' href='#Currencies.CurrenciesBase.Basket'>#</a>
 <strong><code>Currencies.CurrenciesBase.Basket</code></strong> &mdash; <em>Type</em>.</p>
 <p>A mutable collection of <code>Monetary</code> values of various currencies. Like regular <code>Monetary</code> values, <code>Basket</code> values support basic arithmetic operations, with both other baskets and with raw monetary values. The constructor for <code>Basket</code> accepts either a monetary value or a vector of monetary values.</p>
@@ -336,7 +336,7 @@ push!(basket, 10GBP) # Basket([3USD, 2EUR, 10GBP])
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/basket.jl#L27-51' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/basket.jl#L27-51' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.Monetary' href='#Currencies.CurrenciesBase.Monetary'>#</a>
 <strong><code>Currencies.CurrenciesBase.Monetary</code></strong> &mdash; <em>Type</em>.</p>
 <p>A representation of a monetary value, denominated in some currency. The currency used is part of the type and not the object. The value is internally represented as a quantity of some integer type. The usual way to construct a <code>Monetary</code> directly, if needed, is:</p>
@@ -357,7 +357,7 @@ Monetary(:USD, BigInt(10000); precision=4)  # 1.0000 USD
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/monetary.jl#L11-40' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/monetary.jl#L11-40' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.currency-Tuple{Currencies.CurrenciesBase.Monetary{T,U,V}}' href='#Currencies.CurrenciesBase.currency-Tuple{Currencies.CurrenciesBase.Monetary{T,U,V}}'>#</a>
 <strong><code>Currencies.CurrenciesBase.currency</code></strong> &mdash; <em>Method</em>.</p>
 <div class="codehilite"><pre><span></span>currency(m::Monetary) → Symbol
@@ -366,12 +366,12 @@ Monetary(:USD, BigInt(10000); precision=4)  # 1.0000 USD
 
 <p>Return a symbol corresponding to the ISO 4217 currency code of the currency that the given monetary amount is representing. For example, <code>currency(80USD)</code> will return <code>:USD</code>. If the given monetary value is of a non-ISO 4217 currency, then the returned symbol should contain only lowercase letters.</p>
 <p>Prefer <code>iso4217alpha</code> to this function if a string is desired.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L14-23' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L14-23' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.currencyinfo' href='#Currencies.CurrenciesBase.currencyinfo'>#</a>
 <strong><code>Currencies.CurrenciesBase.currencyinfo</code></strong> &mdash; <em>Function</em>.</p>
 <p>Get a brief human-readable English-language description of the currency. The description should begin with the common name of the currency, which should describe it unambiguously (up to variations on the same currency). Optionally, parentheses following the main description may include additional information (such as the unit of a major currency unit).</p>
 <p>This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L42-51' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L42-51' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.decimals-Tuple{Symbol}' href='#Currencies.CurrenciesBase.decimals-Tuple{Symbol}'>#</a>
 <strong><code>Currencies.CurrenciesBase.decimals</code></strong> &mdash; <em>Method</em>.</p>
 <div class="codehilite"><pre><span></span>decimals(m::Monetary) → Int
@@ -381,7 +381,7 @@ decimals(d::DataType) → Int
 
 
 <p>Get the precision, in terms of the number of decimal places after the major currency unit, of the given <code>Monetary</code> value or type. Alternatively, if given a symbol, gets the default exponent (the number of decimal places to represent the minor currency unit) for that symbol. Return <code>-1</code> if there is no sane minor unit, such as for several kinds of precious metal.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L26-36' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L26-36' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.filltype-Tuple{Type{Currencies.CurrenciesBase.Monetary{T,U,V}}}' href='#Currencies.CurrenciesBase.filltype-Tuple{Type{Currencies.CurrenciesBase.Monetary{T,U,V}}}'>#</a>
 <strong><code>Currencies.CurrenciesBase.filltype</code></strong> &mdash; <em>Method</em>.</p>
 <div class="codehilite"><pre><span></span>filltype(typ) → typ
@@ -389,7 +389,7 @@ decimals(d::DataType) → Int
 
 
 <p>Fill in default type parameters to get a fully-specified concrete type from a partially-specified one.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/monetary.jl#L61-66' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/monetary.jl#L61-66' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.iso4217alpha' href='#Currencies.CurrenciesBase.iso4217alpha'>#</a>
 <strong><code>Currencies.CurrenciesBase.iso4217alpha</code></strong> &mdash; <em>Function</em>.</p>
 <div class="codehilite"><pre><span></span>iso4217alpha(s::Symbol)   → String
@@ -399,7 +399,7 @@ iso4217alpha(t::DataType) → String
 
 
 <p>Get the ISO 4217 alphabetic code for a currency. For custom currencies, a lowercase string will be returned, and this should not be interpreted as an ISO 4217 code. Otherwise, a three-letter uppercase string will be returned. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L69-79' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L69-79' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.iso4217num' href='#Currencies.CurrenciesBase.iso4217num'>#</a>
 <strong><code>Currencies.CurrenciesBase.iso4217num</code></strong> &mdash; <em>Function</em>.</p>
 <div class="codehilite"><pre><span></span>iso4217num(s::Symbol)   → Int
@@ -409,7 +409,7 @@ iso4217num(t::DataType) → Int
 
 
 <p>Get the ISO 4217 numeric code for a currency. For custom currencies, a value of <code>0</code> will be returned. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object. Note that most applications should zero-pad this code to three digits.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L55-64' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L55-64' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.longsymbol' href='#Currencies.CurrenciesBase.longsymbol'>#</a>
 <strong><code>Currencies.CurrenciesBase.longsymbol</code></strong> &mdash; <em>Function</em>.</p>
 <div class="codehilite"><pre><span></span>longsymbol(s::Symbol)   → String
@@ -419,7 +419,7 @@ longsymbol(t::DataType) → String
 
 
 <p>Get a commonly-used currency symbol for a currency, with at least enough disambiguation to be non-ambiguous. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L97-105' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L97-105' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.majorunit' href='#Currencies.CurrenciesBase.majorunit'>#</a>
 <strong><code>Currencies.CurrenciesBase.majorunit</code></strong> &mdash; <em>Function</em>.</p>
 <div class="codehilite"><pre><span></span>majorunit(s::Symbol)   → Monetary{s}
@@ -429,7 +429,7 @@ majorunit(t::DataType) → t
 
 
 <p>Get the major unit of the currency. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L109-116' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L109-116' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.newcurrency!-Tuple{Symbol,AbstractString,Int64}' href='#Currencies.CurrenciesBase.newcurrency!-Tuple{Symbol,AbstractString,Int64}'>#</a>
 <strong><code>Currencies.CurrenciesBase.newcurrency!</code></strong> &mdash; <em>Method</em>.</p>
 <p>Add a new currency to the (global) currency list and return a unit for that currency. Prefer the <code>@usingcustomcurrency</code> macro, which leads to more clear code, whenever possible. This function takes three arguments: the symbol for the currency, a string description of the currency (following the conventions outlined in the documentation for <code>currencyinfo</code>), and an exponent representing the number of decimal points to describe the minor currency unit in terms of the major currency unit. Conventionally, the symbol used to describe custom currencies should consist of only lowercase letters.</p>
@@ -437,7 +437,7 @@ majorunit(t::DataType) → t
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/custom.jl#L3-14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/custom.jl#L3-14' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.shortsymbol' href='#Currencies.CurrenciesBase.shortsymbol'>#</a>
 <strong><code>Currencies.CurrenciesBase.shortsymbol</code></strong> &mdash; <em>Function</em>.</p>
 <div class="codehilite"><pre><span></span>shortsymbol(s::Symbol)   → String
@@ -447,7 +447,7 @@ shortsymbol(t::DataType) → String
 
 
 <p>Get a short, possibly ambiguous, commonly-used symbol for a currency. This function may be called with either a symbol, a <code>Monetary</code> type, or a <code>Monetary</code> object.</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/currency.jl#L84-92' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/currency.jl#L84-92' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.@usingcurrencies-Tuple{Any}' href='#Currencies.CurrenciesBase.@usingcurrencies-Tuple{Any}'>#</a>
 <strong><code>Currencies.CurrenciesBase.@usingcurrencies</code></strong> &mdash; <em>Macro</em>.</p>
 <p>Export each given currency symbol into the current namespace. The individual unit exported will be a full unit of the currency specified, not the smallest possible unit. For instance, <code>@usingcurrencies EUR</code> will export <code>EUR</code>, a currency unit worth 1€, not a currency unit worth 0.01€.</p>
@@ -461,7 +461,7 @@ shortsymbol(t::DataType) → String
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/usingcurrencies.jl#L1-14' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/usingcurrencies.jl#L1-14' class='documenter-source'>source</a><br></p>
 <p><a id='Currencies.CurrenciesBase.@usingcustomcurrency-Tuple{Any,Any,Any}' href='#Currencies.CurrenciesBase.@usingcustomcurrency-Tuple{Any,Any,Any}'>#</a>
 <strong><code>Currencies.CurrenciesBase.@usingcustomcurrency</code></strong> &mdash; <em>Macro</em>.</p>
 <p>Add a new currency to the (global) currency list and assign a variable in the local namespace to that currency's unit. Provide three arguments: an identifier for the currency, a string description of the currency (following the conventions outlined in the documentation for <code>currencyinfo</code>), and an exponent representing the number of decimal points to describe the minor currency unit in terms of the major currency unit. Conventionally, the identifer used to describe custom currencies should consist of only lowercase letters.</p>
@@ -470,7 +470,7 @@ shortsymbol(t::DataType) → String
 </pre></div>
 
 
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/CurrenciesBase/custom.jl#L21-32' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/CurrenciesBase/custom.jl#L21-32' class='documenter-source'>source</a><br></p>
 <p><a id='Formatting-1'></a></p>
 <h2 id="formatting">Formatting</h2>
 <p>```@autodocs
@@ -489,7 +489,7 @@ A table of exchange rates denominated in some currency. In which currency it is 
 Optionally, `ExchangeRateTable` objects may contain information about the date for which they apply. If this isn&#39;t provided, then the current date is used.
 
 
-<span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">&#39;_blank&#39;</span> <span class="na">href=</span><span class="s">&#39;https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/Valuation/Valuation.jl#L12-19&#39;</span> <span class="na">class=</span><span class="s">&#39;documenter-source&#39;</span><span class="nt">&gt;</span>source<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">&#39;_blank&#39;</span> <span class="na">href=</span><span class="s">&#39;https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/Valuation/Valuation.jl#L12-19&#39;</span> <span class="na">class=</span><span class="s">&#39;documenter-source&#39;</span><span class="nt">&gt;</span>source<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
 
 <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&#39;Currencies.Valuation.ecbrates-Tuple{}&#39;</span> <span class="na">href=</span><span class="s">&#39;#Currencies.Valuation.ecbrates-Tuple{}&#39;</span><span class="nt">&gt;</span>#<span class="nt">&lt;/a&gt;</span>
 **`Currencies.Valuation.ecbrates`** <span class="ni">&amp;mdash;</span> *Method*.
@@ -503,7 +503,7 @@ ecbrates(date::Date) → ExchangeRateTable</p>
 Data is retrieved from https://fixer.io/, and then cached in memory to avoid excessive network traffic. Because of the nature of cached data, an application running for a long period of time may receive data that is one week or more out of date.
 
 
-<span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">&#39;_blank&#39;</span> <span class="na">href=</span><span class="s">&#39;https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/Valuation/Valuation.jl#L57-71&#39;</span> <span class="na">class=</span><span class="s">&#39;documenter-source&#39;</span><span class="nt">&gt;</span>source<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">target=</span><span class="s">&#39;_blank&#39;</span> <span class="na">href=</span><span class="s">&#39;https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/Valuation/Valuation.jl#L55-69&#39;</span> <span class="na">class=</span><span class="s">&#39;documenter-source&#39;</span><span class="nt">&gt;</span>source<span class="nt">&lt;/a&gt;&lt;br&gt;</span>
 
 <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&#39;Currencies.Valuation.valuate-Tuple{Any,Type{Currencies.CurrenciesBase.Monetary{U,V,W}},Currencies.CurrenciesBase.Monetary{T,U,V}}&#39;</span> <span class="na">href=</span><span class="s">&#39;#Currencies.Valuation.valuate-Tuple{Any,Type{Currencies.CurrenciesBase.Monetary{U,V,W}},Currencies.CurrenciesBase.Monetary{T,U,V}}&#39;</span><span class="nt">&gt;</span>#<span class="nt">&lt;/a&gt;</span>
 **`Currencies.Valuation.valuate`** <span class="ni">&amp;mdash;</span> *Method*.
@@ -519,7 +519,7 @@ valuate(table, as::DataType, amount::Monetary) → as</p>
 <p>rates = ExchangeRateTable(:USD =&gt; 1.0, :CAD =&gt; 0.75)
 valuate(rates, :CAD, 21USD)  # 28CAD
 ```</p>
-<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/602aab39948f213127707f2ea1914d2e4deb9ed5/src/Valuation/Valuation.jl#L86-97' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/JuliaFinance/Currencies.jl/tree/80a79fffe096327a02e597562561576c393d25a9/src/Valuation/Valuation.jl#L84-95' class='documenter-source'>source</a><br></p>
           <aside class="copyright" role="note">
             
               Copyright © 2015–2016 Fengyang Wang and other contributors &ndash;
